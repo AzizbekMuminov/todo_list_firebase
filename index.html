@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="loading" id="loading">
+        <i class="fa fa-trash fa-4x fa-spin" style="color: white"></i>
+    </div>
+
+    <div class="container" id="signed-out">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <input class="form-control mb-2" type="email">
+                <input class="form-control mb-2" type="password">
+                <button class="mb-2 btn btn-primary" id="sign-in-btn">Sign up</button>
+                <button class="mb-2 btn" id="sign-inning-btn">Sign in</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="signed-in">
+        <div class="row">
+            <div class="col-md-8">
+                <button class="btn btn-danger mb-2" id="sign-out-btn">Sign Out</button>
+                <ul id="todo-list" class="list-group">
+
+                </ul>
+                <div style="border: 1px solid lightgray; padding: 10px;">
+                    <div class="mb-2 d-flex" style="align-items: baseline;">
+                        <input class="mb-2" id="todo-label">
+                        <input class="mb-2" type="checkbox" id="todo-done">
+                    </div>
+                    <button class="btn btn-warning mb-2" id="todo-add">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDTQsGzDMkny4pl2ShBLcseKWqniTdz1fw",
+            authDomain: "fir-lesson-12.firebaseapp.com",
+            databaseURL: "https://fir-lesson-12.firebaseio.com",
+            projectId: "fir-lesson-12",
+            storageBucket: "fir-lesson-12.appspot.com",
+            messagingSenderId: "596112535160"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="main.js">
+    </script>
+
+</body>
+
+</html>
